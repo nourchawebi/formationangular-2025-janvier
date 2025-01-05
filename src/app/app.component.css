@@ -1,0 +1,277 @@
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+h1{
+  color: blue;
+}
+.texte-droite{
+  text-align: right;
+}
+
+.texte-gauche{
+  text-align: left;
+}
+.texte-gauche{
+  text-align: left;
+}
+p{
+  font-size: 16px;
+}
+/* component.css */
+.red {
+  background-color: red;
+  color: white;
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+
+
+.image-gauche{
+  float: left; /* Permet à l'élément de flotter à gauche de son conteneur */
+  margin-right: 5px;
+  width: 100px; /* en pixel */
+  height: auto;
+}
+
+.rouge{
+  color: #ff0000;
+}
+
+.opacity{
+  opacity: 0.5;
+}
+
+
+.fond-rouge{
+  background-color: red;
+}
+
+
+/* Style du menu principal */
+.menu2 {
+  background-color: #0C1A3C;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+.menu2 > li {
+  /* Applique les styles uniquement aux éléments <li> qui sont des enfants directs de .menu2 */
+  list-style: none; /* Supprime les points */
+  position: relative; /* Nécessaire pour le positionnement des sous-menus */
+}
+
+.menu2 > li > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.menu2 > li > a:hover {
+  background-color: #575757;
+
+}
+
+/* Style du sous-menu */
+.submenu2 {
+  display: none; /* Caché par défaut */
+  position: relative;
+
+  left: 0;
+  background-color: #444;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-width: 150px;
+}
+
+.submenu2 li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.submenu2 li a:hover {
+  background-color: #575757;
+}
+
+/* Afficher le sous-menu au survol */
+.menu2 > li:hover .submenu2 {
+ ;
+  display: block;
+}
+.bloc {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bloc button {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove border */
+  color: white; /* White text */
+  padding: 15px 32px; /* Add some padding for bigger buttons */
+  text-align: center; /* Aligne le texte au centre horizontalement à l'intérieur du bouton */
+  text-decoration: none; /* Supprime les soulignements ou autres décorations de texte */
+  display: inline-block; /* Permet au bouton de se comporter comme un élément en ligne tout en respectant les dimensions */
+  font-size: 16px; /* Définit la taille de la police à 16 pixels */
+  margin: 10px; /* Ajoute un espace de 10 pixels autour du bouton */
+  cursor: pointer; /* Change le curseur en une main pointant pour indiquer que l'élément est cliquable */
+  border-radius: 5px; /* Donne des coins arrondis avec un rayon de 5 pixels */
+  transition: background-color 0.3s, transform 0.3s;
+  /* Ajoute une transition fluide :
+      - Pour les changements de couleur de fond (background-color) sur 0,3 secondes.
+      - Pour les transformations (comme agrandir ou déplacer le bouton) sur 0,3 secondes. */
+}
+
+.bloc button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+
+
+.bloc button:active {
+  background-color: #092c09; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slightly shrink the button when clicked */
+}
+
+
+/* Header Section */
+.header {
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.header h1 {
+  color: #6A1B9A;
+  font-size: 32px;
+}
+
+.header h2 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0C1A3C;
+  color: white;
+  padding: 50px 10%;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .hero-text {
+    max-width: 80%;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+}
+
+/* Media query for extra small screens (e.g., mobile) */
+@media screen and (max-width: 480px) {
+  .hero-text {
+    max-width: 90%;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+}
+.hero-text button {
+  background-color: #E91E63;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-text button:hover {
+  background-color: #C2185B;
+}
+
+.hero-image {
+  max-width: 40%;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  margin-top: 20px;
+}
+form {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="date"], input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin-right: 5px;
+}
+/* Basic layout styles */
+/* Main content section */
