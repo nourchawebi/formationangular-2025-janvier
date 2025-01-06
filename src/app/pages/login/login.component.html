@@ -88,12 +88,15 @@
                 </label>
               </div>
               <div class="d-grid">
-                <button class="btn btn-primary btn-start" type="submit">Sign In</button>
+                <button class="btn btn-primary btn-start" [disabled]="property">Sign In</button>
+                <button (click)="onClick()">Click Me</button>
+
               </div>
             </form>
           </div>
         </div>
         <div class="google-bg text-center">
+
           <span><a href="#">Or sign in with</a></span>
           <div class="sign-google">
             <ul>

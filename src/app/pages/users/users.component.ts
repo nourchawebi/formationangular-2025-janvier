@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
+name:string='nour';
+  isVisible = false;
+  isActive=false;
 
 }

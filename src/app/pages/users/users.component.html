@@ -1,7 +1,17 @@
 <div class="main-wrapper">
 
 
+  <input type="text" [(ngModel)]="name" >
+  <p *ngIf="isVisible; else elseBlock">Ce texte est visible.</p>
+  <ng-template #elseBlock>
+    <p>Le texte est caché.</p>
+  </ng-template>
+  <p [ngStyle]="{'color': isActive ? 'green' : 'red'}">
+    Ce texte change de couleur.
+  </p>
 
+
+  <p> {{ name }}</p>
 
   <div class="breadcrumb-bar">
     <div class="container">
