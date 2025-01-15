@@ -29,4 +29,12 @@ export class ProduitsService {
     formData.append('picture', image);
     return this.http.post<Produit>(`${this.baseUrl}C`, formData);
   }
+  getAllProduits() {
+    return this.http.get<Produit[]>(this.baseUrl);
+  }
+  // Delete a product by ID
+  deleteProduit(id: number) {
+    return this.http.delete<void>(`${this.baseUrl}D/${id}`);
+  }
+
 }
