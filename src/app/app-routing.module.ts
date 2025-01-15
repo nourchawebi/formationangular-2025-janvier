@@ -5,6 +5,9 @@ import {HomeComponent} from "./pages/home/home.component";
 import {UsersComponent} from "./pages/users/users.component";
 import {RoductsComponent} from "./pages/roducts/roducts.component";
 import {LoginComponent} from "./pages/login/login.component";
+import {ModalComponent} from "./pages/modal/modal.component";
+import {AjoutproduitComponent} from "./pages/ajoutproduit/ajoutproduit.component";
+import {ProduitsComponent} from "./pages/produits/produits.component";
 
 const routes: Routes = [ { path:'acceuil',
   component : HeaderfooterComponent,
@@ -20,11 +23,18 @@ const routes: Routes = [ { path:'acceuil',
     {
       path:'products',
       component: RoductsComponent
-    }
+    },
+    { path:'ajoutproduit',
+      component : AjoutproduitComponent},
+    { path:'produits',
+      component : ProduitsComponent},
+
   ]
 },
   {path:'login',
   component:LoginComponent},
+  {path:'modal',
+    component:ModalComponent},
 
   { path: '**', redirectTo: 'acceuil' }];
 
