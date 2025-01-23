@@ -5,6 +5,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {ProduitsService} from "../../services/produits.service";
 import {PageEvent} from "@angular/material/paginator";
 import Swal from "sweetalert2";
+import {ModifierproduitComponent} from "../modifierproduit/modifierproduit.component";
 
 class ProductService {
 }
@@ -117,8 +118,31 @@ export class ProduitsComponent implements OnInit{
     }
     this.paginateReclamations(); // Apply pagination to filtered results
   }
+  selectedproduit: any;
+  openDialog(reclamation: any) {
+    this.selectedproduit = reclamation;
+    const dialogRef = this.dialog.open(ModifierproduitComponent, {
+      width: 'auto', // specify width as per your requirement
+      data: {produit: reclamation } // pass data to your dialog component if needed
+    });
+    dialogRef.componentInstance.update.subscribe((updatedReclamation: any) => {
+      // Find the index of the updated reclamation in the array
+      const index = this.produits.findIndex((item: any) => item.idProduit === updatedReclamation.idProduit);
+      if (index !== -1) {
+        // Update the corresponding reclamation in the array
+        this.produits[index].libelle = updatedReclamation.libelle;
+        this.produits[index].description = updatedReclamation.description;
+        this.produits[index].marque= updatedReclamation.marque;
+
+        // Reapply filtering logic if filteredReclamations is derived from reclamations
+
+        this.filteredproduits = this.produits;
 
 
+      }
+    });
+    this.paginateReclamations();
+  }
 
 
 }

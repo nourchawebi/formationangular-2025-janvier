@@ -30,6 +30,10 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { ModifierproduitComponent } from './pages/modifierproduit/modifierproduit.component';
+import { DetailsproduitsComponent } from './pages/detailsproduits/detailsproduits.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { UnothorizedComponent } from './pages/unothorized/unothorized.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,11 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     LoginComponent,
     ModalComponent,
     ProduitsComponent,
-    AjoutproduitComponent
+    AjoutproduitComponent,
+    ModifierproduitComponent,
+    DetailsproduitsComponent,
+    AdminComponent,
+    UnothorizedComponent
   ],
   imports: [
     BrowserModule,
